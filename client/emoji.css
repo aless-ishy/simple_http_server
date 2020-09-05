@@ -1,0 +1,129 @@
+/*------ Main Emoji Styling ------*/
+
+body {
+    background: #f7f8f9;
+}
+
+
+.emoji {
+    box-sizing: border-box;
+    float: left;
+}
+
+.face {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 0;
+    border-radius: 50%;
+    background: rgb(97, 205, 187);
+}
+
+.face:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -8px;
+    left: -8px;
+    border-radius: 50%;
+    box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 0.07);
+}
+
+.eye {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    left: 24px;
+    z-index: 1;
+    border-radius: 50%;
+    background: #995710;
+}
+
+.eye:last-child {
+    left: auto;
+    right: 24px;
+}
+
+.emoji:hover .eye {
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes blink {
+    10% {
+        height: 16px;
+        top: 48px;
+    }
+    30% {
+        height: 2px;
+        top: 56px;
+    }
+    50% {
+        height: 16px;
+        top: 48px;
+    }
+}
+
+.mouth {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 105px;
+    height: 51px;
+    margin: 0 auto;
+    border-radius: 0 0 50% 50%;
+    overflow: hidden;
+    background: #995710;
+}
+
+.mouth:before,
+.mouth:after {
+    content: '';
+    position: absolute;
+    display: block;
+}
+
+.mouth.teath:before {
+    width: 100%;
+    height: 10px;
+    z-index: 2;
+    background: #fffae6;
+}
+
+.mouth.tongue:after {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    left: 0;
+    right: 0;
+    top: 23px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #d8aa2b;
+}
+
+.sad .mouth {
+    top: 66px;
+    border-radius: 70px 70px 0 0;
+}
+
+.sad .mouth:before {
+    display: none;
+}
+
+.smile .mouth {
+    width: 75px;
+    height: 38px;
+    background: transparent;
+    border-radius: 0 0 50px 50px;
+    border: 4px solid #995710;
+    border-top: 0;
+    -webkit-clip-path: inset(30% 0 0 0);
+    clip-path: inset(30% 0 0 0);
+}

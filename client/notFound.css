@@ -1,0 +1,35 @@
+body{
+    font-family: "Allerta Stencil", "sans-serif";
+    background-color: white;
+    margin: 0;
+}
+
+.header {
+    background-color: white;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(0,150px);
+}
+
+.number-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    /*text-shadow: 2px 2px 0px #c9c9c9, -2px -2px 0px #c9c9c9;*/
+    color: black;
+    font-size: 200px;
+    margin: 0;
+}
+
+.message {
+    margin: 0;
+    font-size: 50px;
+}

@@ -1,0 +1,25 @@
+html,body{
+    height: 90%;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Allerta Stencil", "sans-serif";
+    height: 100%;
+}
+
+.status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number{
+    color: black;
+    font-size: 200px;
+    margin: 0;
+}
